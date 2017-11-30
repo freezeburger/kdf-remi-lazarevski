@@ -28,7 +28,7 @@ header {
 	background: url(./logo.png) no-repeat center top rgb(44, 157, 223);
 	background-size: 60%;
 	background-position-y: 5px;
-	min-height:85px;
+	min-height:110px;
   }
 
   .App>div:last-of-type{
