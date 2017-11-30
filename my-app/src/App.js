@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
-import Header from './Header';
-import Connexion from './Connexion';
-import Formulaire from './Formulaire';
-import CommentaireCommande from './CommentaireCommande';
-import commandes from './commandes.js';
+import Header from './components/Header';
+import Formulaire from './components/Formulaire';
+import CommentaireCommande from './components/CommentaireCommande';
 import './index.css';
 import './style/css/bootstrap.css';
 import './App.css';
