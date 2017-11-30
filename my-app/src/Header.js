@@ -1,11 +1,12 @@
 import React from 'react';
+import './index.css';
 
 class Header extends React.Component {
 	
 	render() {
 		return (
-			<header>
-				<h1>Mon interface de commandes !</h1>
+			<header className="logo-header">
+				{/* <h1 className>SupplyNation</h1> */}
 			</header>
 		)
 	}

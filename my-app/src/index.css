@@ -3,6 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif;
   background: url(./bg.jpg) no-repeat center top;
+  overflow: hidden;
 }
 
 .connexionBox {
@@ -21,3 +22,20 @@ header {
 	margin-bottom: 5px;
 	padding: 10px 20px;
 }
+
+.logo-header {
+	margin: 0 0 20px 0;
+	background: url(./logo.png) no-repeat center top rgb(44, 157, 223);
+	background-size: 60%;
+	background-position-y: 5px;
+	min-height:85px;
+  }
+
+  .App>div:last-of-type{
+	  padding: 20px;
+  }
+
+  .scroller{
+	  overflow-y: scroll;
+	  height: 60vh;
+  }

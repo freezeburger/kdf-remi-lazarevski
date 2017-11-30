@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import Header from './Header';
 import Connexion from './Connexion';
 import Formulaire from './Formulaire';
@@ -30,11 +29,10 @@ class App extends Component {
           <Header />
         </div>
         <div>
-          {/* <Formulaire /> */}
+          <Formulaire />
 
-          <List />
+         {/*  <List /> */}
         </div>
-
       </div>
     );
   }
@@ -47,22 +45,42 @@ const List = props => (
     <div>
       <CommentaireCommande />
     </div>
-    <div className="item">
-      <img src="http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png" alt="" />
+    <div className="scroller">
+      <div className="item">
+        <img src="http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png" alt="" />
 
-      <a className="btn btn-success" href="http://www.thenorthface.com/catalog/sc-gear/men-39-s-better-than-naked-8482-jacket.html">Details</a>
-      <code>Men's</code>
-      <h3>MEN'S BETTER THAN NAKED&trade; JACKET</h3>
-      <select>
-        <option>#1</option>
-        <option>#2</option>
-        <option>#3</option>
-        <option>#4</option>
-        <option>#5</option>
-        <option>#6</option>
+        <a className="btn btn-success" href="http://www.thenorthface.com/catalog/sc-gear/men-39-s-better-than-naked-8482-jacket.html">Details</a>
+        <code>Men's</code>
+        <h3>MEN'S BETTER THAN NAKED&trade; JACKET</h3>
+        <select>
+          <option>#1</option>
+          <option>#2</option>
+          <option>#3</option>
+          <option>#4</option>
+          <option>#5</option>
+          <option>#6</option>
 
-      </select>
+        </select>
 
+      </div>
+
+      <div className="item">
+        <img src="http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png" alt="" />
+
+        <a className="btn btn-success" href="http://www.thenorthface.com/catalog/sc-gear/men-39-s-better-than-naked-8482-jacket.html">Details</a>
+        <code>Men's</code>
+        <h3>MEN'S BETTER THAN NAKED&trade; JACKET</h3>
+        <select>
+          <option>#1</option>
+          <option>#2</option>
+          <option>#3</option>
+          <option>#4</option>
+          <option>#5</option>
+          <option>#6</option>
+
+        </select>
+
+      </div>
     </div>
   </div>
 )
