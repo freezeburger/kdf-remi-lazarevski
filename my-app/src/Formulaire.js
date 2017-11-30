@@ -5,22 +5,19 @@ class Formulaire extends React.Component {
 	render() {
 		return (
 			<form className="connexionBox"
-				className="form"
 			>
 
-				<textarea 
+				<input className="form-control"
 					required
 					maxLength
-			>
-				</textarea>
-
+			/>
 				<div
 					className="info"
 					ref={input => this.messageInfo = input} 
 				>
 				</div>
-
-				<button type="submit" >
+				<br/>
+				<button type="submit" className="btn btn-primary btn-block">
 						Se connecter
 				</button>
 

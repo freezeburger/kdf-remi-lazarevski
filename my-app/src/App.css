@@ -26,3 +26,23 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.item{
+  background: rgba(255, 255, 255, 0.486);
+  border-radius: 15px;
+  margin: 15px;
+  padding: 20px;
+}
+
+.item img{
+  float:left;
+}
+
+.item code{
+  float: none;
+  clear:both;
+}
+
+.item h3{
+  clear:both;
+}
