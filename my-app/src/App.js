@@ -9,8 +9,20 @@ import './style/css/bootstrap.css';
 import './App.css';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      user: { email: '' }
+    }
+  }
   commandes = {
   };
+
+  getValidUser(userEmail) {
+    this.setState({
+      user: { email: userEmail }
+    })
+  }
 
   componentWillMount() {
     const localStorageText = localStorage.getItem('text');
@@ -29,9 +41,9 @@ class App extends Component {
           <Header />
         </div>
         <div>
-          <Formulaire />
-
-         {/*  <List /> */}
+          {
+            !this.state.user.email &&  <Formulaire callback={this.getValidUser.bind(this)} /> || <List user={this.state.user}/>
+          }
         </div>
       </div>
     );
