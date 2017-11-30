@@ -18,10 +18,21 @@ class App extends Component {
   commandes = {
   };
 
+  fetchData(userEmail) {
+    const API = 'http://localhost:5050/CO'
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', API, true);
+    xhr.send()
+    xhr.onload = () => {
+      this.setState({
+        user: { email: userEmail },
+        products: JSON.parse(xhr.responseText)
+      })
+    }
+  }
+
   getValidUser(userEmail) {
-    this.setState({
-      user: { email: userEmail }
-    })
+    this.fetchData(userEmail);
   }
 
   componentWillMount() {
@@ -42,7 +53,7 @@ class App extends Component {
         </div>
         <div>
           {
-            !this.state.user.email &&  <Formulaire callback={this.getValidUser.bind(this)} /> || <List user={this.state.user}/>
+            !this.state.user.email && <Formulaire callback={this.getValidUser.bind(this)} /> || <List {...this.state} />
           }
         </div>
       </div>
@@ -55,44 +66,33 @@ export default App;
 const List = props => (
   <div>
     <div>
+      <h3 style={{color:'white'}}>{props.user.email.toUpperCase()}</h3>
       <CommentaireCommande />
     </div>
     <div className="scroller">
-      <div className="item">
-        <img src="http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png" alt="" />
-
-        <a className="btn btn-success" href="http://www.thenorthface.com/catalog/sc-gear/men-39-s-better-than-naked-8482-jacket.html">Details</a>
-        <code>Men's</code>
-        <h3>MEN'S BETTER THAN NAKED&trade; JACKET</h3>
-        <select>
-          <option>#1</option>
-          <option>#2</option>
-          <option>#3</option>
-          <option>#4</option>
-          <option>#5</option>
-          <option>#6</option>
-
-        </select>
-
-      </div>
-
-      <div className="item">
-        <img src="http://images.thenorthface.com/is/image/TheNorthFace/236x204_CLR/mens-better-than-naked-jacket-AVMH_LC9_hero.png" alt="" />
-
-        <a className="btn btn-success" href="http://www.thenorthface.com/catalog/sc-gear/men-39-s-better-than-naked-8482-jacket.html">Details</a>
-        <code>Men's</code>
-        <h3>MEN'S BETTER THAN NAKED&trade; JACKET</h3>
-        <select>
-          <option>#1</option>
-          <option>#2</option>
-          <option>#3</option>
-          <option>#4</option>
-          <option>#5</option>
-          <option>#6</option>
-
-        </select>
-
-      </div>
+    {
+      props.products.map(prod => <Item key={prod.id} item={prod}/>)
+    }
     </div>
+  </div>
+)
+
+
+const Item = props => (
+  <div className="item">
+    <img src={props.item['product-image-url']} alt="" />
+
+    <a className="btn btn-success" href={props.item['product-url']}>Details</a>
+    <code>Men's</code>
+    <h3>{props.item['product-name']}</h3>
+    <select>
+      <option>#1</option>
+      <option>#2</option>
+      <option>#3</option>
+      <option>#4</option>
+      <option>#5</option>
+      <option>#6</option>
+    </select>
+
   </div>
 )
