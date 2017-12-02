@@ -3,7 +3,6 @@ import React from 'react';
 class CommentaireCommande extends React.Component {
 
 	state = {
-		messages: this.props,
 		length: this.props.length
 	}
 
@@ -13,10 +12,7 @@ class CommentaireCommande extends React.Component {
 		const message = {
 			message: this.message.value
 		}
-		
-		// this.props.addMessage(message);
 
-		// Reset
 		const length = this.props.length;
 		this.setState({ length });
 		this.messageForm.reset();
