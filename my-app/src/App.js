@@ -65,7 +65,7 @@ const List = props => (
   <div>
     <div>
       <h3 style={{color:'white'}}>{props.user.email.toUpperCase()}</h3>
-      <CommentaireCommande />
+      <CommentaireCommande length={20}/>
     </div>
     <div className="scroller">
     {

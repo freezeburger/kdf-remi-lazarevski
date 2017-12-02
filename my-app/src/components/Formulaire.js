@@ -44,7 +44,6 @@ class Formulaire extends React.Component {
 
 					<input className="form-control"
 						required
-						maxLength
 						ref={input => this.mail = input}
 					/>
 

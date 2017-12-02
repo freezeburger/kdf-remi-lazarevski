@@ -39,3 +39,11 @@ header {
 	  overflow-y: scroll;
 	  height: 60vh;
   }
+
+  .info {
+	background-color: rgb(227, 231, 231);
+	max-width: 22px;
+	border:2px solid rgb(190, 190, 190);
+	text-align: right;
+	float:right;
+}
