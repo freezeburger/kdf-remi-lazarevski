@@ -9,10 +9,6 @@ class CommentaireCommande extends React.Component {
 	createMessage = event => {
 		event.preventDefault();
 
-		const message = {
-			message: this.message.value
-		}
-
 		const length = this.props.length;
 		this.setState({ length });
 		this.messageForm.reset();
@@ -36,7 +32,7 @@ class CommentaireCommande extends React.Component {
 						{this.state.length}
 				</div>
 
-				<textarea className="form-control"
+				<textarea className="form-control commentaire"
 					required
 					maxLength={this.props.length}
 					ref={input => this.message = input}
@@ -46,7 +42,7 @@ class CommentaireCommande extends React.Component {
 
 				
 
-				<button type="submit" className="btn btn-primary btn-block">
+				<button type="submit" className="btn btn-primary btn-block commentaire">
 						Valider la commande
 				</button>
 

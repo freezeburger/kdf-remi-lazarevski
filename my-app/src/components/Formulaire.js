@@ -14,7 +14,6 @@ class Formulaire extends React.Component {
 
 		const mail = this.mail.value;
 		const extensionMail = mail.substring(mail.lastIndexOf('@'));
-		console.log(extensionMail)
 		let isMailGood = false;
 
 
