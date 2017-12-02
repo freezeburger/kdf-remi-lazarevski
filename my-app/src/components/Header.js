@@ -1,12 +1,13 @@
 import React from 'react';
 import '../index.css';
+import logo from '../logo.png';
 
 class Header extends React.Component {
 	
 	render() {
 		return (
 			<header className="logo-header">
-				{/* <h1 className>SupplyNation</h1> */}
+				<div className="logo"> <img src={logo} alt='logo-supplynation'/> </div>
 			</header>
 		)
 	}
